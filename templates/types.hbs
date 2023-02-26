@@ -1,0 +1,13 @@
+import React from 'react';
+
+export interface {{name}}Props extends React.HTMLAttributes<{{element}}> {
+
+}
+
+{{#if forwardRef}}
+{{#if extraRef}}
+export type {{name}}Ref = {{element}} & {
+    extra: () => void;
+};
+{{/if}}
+{{/if}}

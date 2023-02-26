@@ -1,0 +1,9 @@
+{
+    "locations": {
+        "atoms": "./src/atoms",
+        "molecules": "./src/molecules",
+        "organisms": "./src/organisms",
+        "templates": "./src/templates",
+        "pages": "./src/pages"
+    }
+}

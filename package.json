@@ -1,0 +1,22 @@
+{
+  "name": "init-fc",
+  "version": "0.0.3",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "init-fc": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.6.0",
+    "commander": "^10.0.0",
+    "fs-jetpack": "^5.1.0",
+    "handlebars": "^4.7.7"
+  }
+}

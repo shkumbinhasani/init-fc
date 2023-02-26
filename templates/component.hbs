@@ -1,0 +1,26 @@
+import React, { {{#if forwardRef}}ForwardedRef, forwardRef, ForwardRefRenderFunction, {{#if extraRef}}useImperativeHandle{{/if}}{{else}}FC{{/if}} } from "react";
+import { {{name}}Props{{#if extraRef}}, {{name}}Ref{{/if}} } from "./{{name}}.types";
+{{#if hasScss}}
+import styles from "./{{name}}.module.scss";
+{{/if}}
+
+const {{name}}: {{#if forwardRef}}ForwardRefRenderFunction<{{#if extraRef}}{{name}}Ref{{else}}{{element}}{{/if}}, {{name}}Props>{{else}}FC<{{name}}Props>{{/if}} = (props: {{name}}Props{{#if forwardRef}}, ref: ForwardedRef<{{#if extraRef}}{{name}}Ref{{else}}{{element}}{{/if}}>{{/if}}) => {
+{{#if extraRef}}
+    const internalRef = React.useRef<{{element}}>(null);
+
+    useImperativeHandle(ref, () => {
+        const current = internalRef.current as {{name}}Ref;
+        current.extra = () => {
+            current.focus();
+        }
+        return current;
+    }, [])
+{{/if}}
+          return (
+    <{{htmlElement}} {...props}{{#if hasScss}} className={[props.className, styles.{{name}}].join(" ")}{{else}} className={props.className}{{/if}} {{#if forwardRef}}ref={ {{#if extraRef}}internalRef{{else}}ref{{/if}} }{{/if}}>
+      {props.children}
+    </{{htmlElement}}>
+  );
+};
+
+export default {{#if forwardRef}}forwardRef({{name}}){{else}}{{name}}{{/if}};
