@@ -17,3 +17,16 @@ The script uses the current working directory to determine the location of the c
 After getting the required information from the user, the script creates a new folder for the component and generates the necessary files (types.ts, module.scss, index.ts, and tsx). It also exports the new component in the index.ts file of its respective component type folder.
 
 Finally, the script displays a confirmation message indicating that the component has been successfully created.
+
+## You dont use atomic design?
+
+If you don't use atomic design, you can create a `crcpaths.json` file in the root of your project with the following content:
+
+```json
+{
+  "locations": {
+    "components": "src/components",
+    "pages": "src/pages"
+  }
+}
+```
