@@ -1,6 +1,6 @@
-# INIT-FC - Create a new React component
+# ⚛️ Init-FC - Create a new React component
 
-![Cover image](https://i.imgur.com/5eoZRBT.gif)
+![Cover image](https://i.imgur.com/BP7MLMx.gif)
 
 # Installation
 
